@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dip">
+
+
+    <TextView
+        android:id="@+id/tv_appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dip"
+        android:gravity="center"
+        android:text="动能电筒"
+        android:textColor="@color/white"
+        android:textSize="20dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_info"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:layout_marginTop="20dip"
+        android:layout_marginEnd="20dip"
+        android:background="@drawable/information"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+
+        android:id="@+id/iv_light"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:background="@drawable/light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_timeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dip"
+        android:text="剩余可用时间"
+        android:textColor="@color/white"
+        android:textSize="30dip"
+        app:layout_constraintEnd_toEndOf="@+id/iv_light"
+        app:layout_constraintStart_toStartOf="@+id/iv_light"
+        app:layout_constraintTop_toBottomOf="@+id/iv_light" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dip"
+        android:text="0:0:0"
+        android:textColor="@color/white"
+        android:textSize="40dip"
+        app:layout_constraintEnd_toEndOf="@+id/tv_timeTitle"
+        app:layout_constraintStart_toStartOf="@+id/tv_timeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_timeTitle" />
+
+    <Switch
+        android:id="@+id/sw_button"
+        android:layout_width="188dip"
+        android:layout_height="28dip"
+        android:layout_marginTop="8dip"
+        android:layout_marginBottom="8dip"
+        android:showText="false"
+        android:switchTextAppearance="@style/SwitchTheme"
+        android:text="蹦迪模式"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:thumb="@xml/switch_custom_thumb_selector"
+        android:track="@xml/switch_custom_track_selector"
+        app:layout_constraintBottom_toTopOf="@+id/iv_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_appTitle"
+        app:layout_constraintVertical_bias="0.377" />
+
+    <Switch
+        android:id="@+id/sw_ShakeButton"
+        android:layout_width="188dip"
+        android:layout_height="28dip"
+        android:layout_marginTop="8dp"
+        android:showText="false"
+        android:switchTextAppearance="@style/SwitchTheme"
+        android:text="震动反馈"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:thumb="@xml/switch_custom_thumb_selector"
+        android:track="@xml/switch_custom_track_selector"
+        app:layout_constraintEnd_toEndOf="@+id/sw_button"
+        app:layout_constraintStart_toStartOf="@+id/sw_button"
+        app:layout_constraintTop_toBottomOf="@+id/sw_button" />
+
+    <Switch
+        android:id="@+id/sw_RunColorButton"
+        android:layout_width="188dip"
+        android:layout_height="28dip"
+        android:layout_marginTop="8dp"
+        android:showText="false"
+        android:switchTextAppearance="@style/SwitchTheme"
+        android:text="屏闪跑马灯"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:visibility="gone"
+        android:thumb="@xml/switch_custom_thumb_selector"
+        android:track="@xml/switch_custom_track_selector"
+        app:layout_constraintEnd_toEndOf="@+id/sw_ShakeButton"
+        app:layout_constraintStart_toStartOf="@+id/sw_ShakeButton"
+        app:layout_constraintTop_toBottomOf="@+id/sw_ShakeButton" />
+
+
+    <TextView
+        android:id="@+id/tv_process"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="闪光频率调节"
+        android:textColor="@color/white"
+        android:textSize="20dip"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="@+id/iv_light"
+        app:layout_constraintStart_toStartOf="@+id/iv_light"
+        app:layout_constraintTop_toTopOf="@+id/tv_timeTitle" />
+
+
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/white"
+        android:textSize="30dip"
+        app:layout_constraintEnd_toEndOf="@+id/sb_num"
+        app:layout_constraintStart_toStartOf="@+id/sb_num"
+        app:layout_constraintTop_toTopOf="@+id/tv_time" />
+
+    <SeekBar
+        android:id="@+id/sb_num"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:maxHeight="2dp"
+        android:min="10"
+        android:minHeight="2dp"
+        android:progressDrawable="@xml/layer_progress"
+        android:thumb="@xml/shape_circle"
+        app:layout_constraintEnd_toEndOf="@+id/tv_timeTitle"
+        app:layout_constraintStart_toStartOf="@+id/tv_timeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_timeTitle" />
+
+
+</android.support.constraint.ConstraintLayout>
